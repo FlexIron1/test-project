@@ -26,7 +26,7 @@ public class Airplane {
     @Column(name = "fuel_capacity")
     private BigDecimal value;
 
-    private int seats;
+    private int place;
 }
 
 

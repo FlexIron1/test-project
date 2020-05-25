@@ -19,50 +19,50 @@ public class AirplaneServiceImpl implements AirplaneService {
     private ExternalApproveService approveService;
 
     @Override
-    public boolean approve(AirplaneDto airplaneDto) {
-        return approveService.approve(new AirplaneAdapter(airplaneDto)) == 0;
+    public boolean approve( AirplaneDto airplaneDto ) {
+        return approveService.approve ( new AirplaneAdapter ( airplaneDto ) ) == 0;
     }
 
     @Override
-    public Airplane save(Airplane airplane) {
-        return airplaneRepository.save(airplane);
+    public Airplane save( Airplane airplane ) {
+        return airplaneRepository.save ( airplane );
     }
 
     @Override
-    public Optional<Airplane> load(Long id) {
-        return airplaneRepository.findById(id);
+    public Optional<Airplane> load( Long id ) {
+        return airplaneRepository.findById ( id );
     }
 
     @Override
-    public Airplane fromDto(AirplaneDto dto) {
-        return new Airplane(
-                dto.getId(),
-                dto.getBrand(),
-                dto.getModel(),
-                dto.getManufacturer(),
-                dto.getYear(),
-                dto.getValue(),
-                dto.getPlace()
+    public Airplane fromDto( AirplaneDto dto ) {
+        return new Airplane (
+                dto.getId ( ) ,
+                dto.getBrand ( ) ,
+                dto.getModel ( ) ,
+                dto.getManufacturer ( ) ,
+                dto.getYear ( ) ,
+                dto.getValue ( ) ,
+                dto.getPlace ( )
 
         );
     }
 
     @Override
-    public AirplaneDto toDTO(Airplane airplane) {
-        return new AirplaneDto(
-                airplane.getId(),
-                airplane.getBrand(),
-                airplane.getModel(),
-                airplane.getManufacturer(),
-                airplane.getYear(),
-                airplane.getValue(),
-                airplane.getSeats()
+    public AirplaneDto toDTO( Airplane airplane ) {
+        return new AirplaneDto (
+                airplane.getId ( ) ,
+                airplane.getBrand ( ) ,
+                airplane.getModel ( ) ,
+                airplane.getManufacturer ( ) ,
+                airplane.getYear ( ) ,
+                airplane.getValue ( ) ,
+                airplane.getPlace ( )
 
         );
     }
 
     @Override
-    public Long getId(Airplane airplane) {
-        return airplane.getId();
+    public Long getId( Airplane airplane ) {
+        return airplane.getId ( );
     }
 }
