@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -22,7 +23,8 @@ public class Car {
 
     @Column(name = "year_of_issue")
     private Short year;
+    @ElementCollection(targetClass = Value.class, fetch = FetchType.EAGER)
+    @CollectionTable(name = "car_value", joinColumns = @JoinColumn(name = "car_id"))
+    private Set<Value> value;
 
-    @Column(name = "assessed_value")
-    private BigDecimal value;
 }

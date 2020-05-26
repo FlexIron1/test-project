@@ -6,7 +6,7 @@ import com.mcb.creditfactory.model.Car;
 import java.util.Optional;
 
 public interface CarService {
-    boolean approve(CarDto dto);
+//    boolean approve(CarDto dto);
     Car save(Car car);
     Optional<Car> load(Long id);
     Car fromDto(CarDto dto);

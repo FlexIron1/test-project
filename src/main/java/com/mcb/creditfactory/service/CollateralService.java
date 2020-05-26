@@ -57,7 +57,7 @@ public class CollateralService {
             throw new IllegalArgumentException ( );
         }
 
-        return Optional.of ( (CarDto) object )
+        return (Collateral) Optional.of ( (CarDto) object )
                 .map ( carService::fromDto )
                 .map ( carService::getId )
                 .flatMap ( carService::load )

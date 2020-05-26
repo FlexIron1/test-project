@@ -23,13 +23,5 @@ public class AirplaneDto implements Collateral {
     private BigDecimal value;
     private Integer place;
 
-    @Override
-    public LocalDate getDate() {
-        return LocalDate.now ( );
-    }
 
-    @Override
-    public CollateralType getType() {
-        return CollateralType.AIRPLANE;
-    }
 }
