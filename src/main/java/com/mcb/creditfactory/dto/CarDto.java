@@ -19,7 +19,7 @@ public class CarDto implements Collateral  {
     private String model;
     private Double power;
     private Short year;
-    private Set<Value> value;
+    private Set<BigDecimal> value;
 
 
 }

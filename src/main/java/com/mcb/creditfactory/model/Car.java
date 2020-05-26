@@ -3,6 +3,8 @@ package com.mcb.creditfactory.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Cascade;
+
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -23,8 +25,9 @@ public class Car {
 
     @Column(name = "year_of_issue")
     private Short year;
-    @ElementCollection(targetClass = Value.class, fetch = FetchType.EAGER)
+    @ElementCollection(targetClass = BigDecimal.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "car_value", joinColumns = @JoinColumn(name = "car_id"))
-    private Set<Value> value;
+    @Cascade({org.hibernate.annotations.CascadeType.PERSIST})
+    private Set<BigDecimal> value;
 
 }

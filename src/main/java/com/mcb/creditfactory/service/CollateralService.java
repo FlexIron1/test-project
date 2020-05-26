@@ -37,10 +37,10 @@ public class CollateralService {
         }
          if ( object instanceof AirplaneDto ) {
             AirplaneDto airplane = (AirplaneDto) object;
-            boolean approved = airplaneService.approve ( airplane );
-            if ( !approved ) {
-                return null;
-            }
+//            boolean approved = airplaneService.approve ( airplane );
+//            if ( !approved ) {
+//                return null;
+//            }
 
             return Optional.of ( airplane )
                     .map ( airplaneService::fromDto )
