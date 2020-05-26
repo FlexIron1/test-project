@@ -18,7 +18,7 @@ public class AirplaneAdapter implements CollateralObject {
 
     @Override
     public BigDecimal getValue() {
-        return airplaneDto.getValue();
+        return airplaneDto.getValue().iterator().next();
     }
 
     @Override

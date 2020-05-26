@@ -37,10 +37,10 @@ public class CollateralService {
         }
          if ( object instanceof AirplaneDto ) {
             AirplaneDto airplane = (AirplaneDto) object;
-//            boolean approved = airplaneService.approve ( airplane );
-//            if ( !approved ) {
-//                return null;
-//            }
+             boolean approved = airplaneService.approve(airplane);
+             if (!approved) {
+                 return null;
+             }
 
             return Optional.of ( airplane )
                     .map ( airplaneService::fromDto )
@@ -57,7 +57,7 @@ public class CollateralService {
             throw new IllegalArgumentException ( );
         }
 
-        return (Collateral) Optional.of ( (CarDto) object )
+        return Optional.of((CarDto) object)
                 .map ( carService::fromDto )
                 .map ( carService::getId )
                 .flatMap ( carService::load )

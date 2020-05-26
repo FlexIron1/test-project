@@ -30,4 +30,5 @@ public class Car {
     @Cascade({org.hibernate.annotations.CascadeType.PERSIST})
     private Set<BigDecimal> value;
 
+
 }

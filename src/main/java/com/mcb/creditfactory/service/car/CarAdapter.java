@@ -6,6 +6,7 @@ import com.mcb.creditfactory.external.CollateralType;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Set;
 
 
 public class CarAdapter implements CollateralObject {
@@ -20,7 +21,7 @@ public class CarAdapter implements CollateralObject {
 
     @Override
     public BigDecimal getValue() {
-        return (BigDecimal) car.getValue();
+        return  car.getValue().iterator().next();
     }
 
     @Override

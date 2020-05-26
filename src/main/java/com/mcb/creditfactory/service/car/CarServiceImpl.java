@@ -12,9 +12,9 @@ import java.util.Optional;
 
 @Service
 public class CarServiceImpl implements CarService {
+
     @Autowired
     private ExternalApproveService approveService;
-
     @Autowired
     private CarRepository carRepository;
 
@@ -41,7 +41,7 @@ public class CarServiceImpl implements CarService {
                 dto.getModel(),
                 dto.getPower(),
                 dto.getYear(),
-                dto.getValue ()
+                dto.getValue()
         );
     }
 

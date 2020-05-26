@@ -6,7 +6,7 @@ import com.mcb.creditfactory.model.Airplane;
 import java.util.Optional;
 
 public interface AirplaneService {
-//    boolean approve(AirplaneDto dto);
+    boolean approve(AirplaneDto dto);
 
     Airplane save(Airplane car);
 
