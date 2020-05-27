@@ -9,8 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-//import com.mcb.creditfactory.external.ExternalApproveService;
-
 
 @Service
 public class AirplaneServiceImpl implements AirplaneService {
@@ -38,11 +36,11 @@ public class AirplaneServiceImpl implements AirplaneService {
     @Override
     public Airplane fromDto( AirplaneDto dto ) {
         return new Airplane (
-                dto.getId ( ) ,
-                dto.getBrand ( ) ,
-                dto.getModel ( ) ,
-                dto.getManufacturer ( ) ,
-                dto.getYear ( ) ,
+                dto.getId(),
+                dto.getBrand(),
+                dto.getModel(),
+                dto.getManufacturer(),
+                dto.getYear(),
                 dto.getFuelCapacity(),
                 dto.getPlace(),
                 dto.getValue()

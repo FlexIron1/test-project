@@ -25,7 +25,7 @@ public class Airplane {
     private Short year;
     @Column(name = "fuel_capacity")
     private Integer fuelCapacity;
-    private int place;
+    private Integer place;
     @ElementCollection(targetClass = BigDecimal.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "airplane_value", joinColumns = @JoinColumn(name = "airplane_id"))
     @Cascade({org.hibernate.annotations.CascadeType.PERSIST})

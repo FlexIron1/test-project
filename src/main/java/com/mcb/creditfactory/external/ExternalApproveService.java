@@ -18,11 +18,6 @@ public class ExternalApproveService {
 
 
     public int approve(CollateralObject object) {
-
-
-
-
-
         int code;
         switch (object.getType()) {
             case CAR:

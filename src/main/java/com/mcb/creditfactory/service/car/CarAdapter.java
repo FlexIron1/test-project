@@ -6,16 +6,13 @@ import com.mcb.creditfactory.external.CollateralType;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Set;
 
 
 public class CarAdapter implements CollateralObject {
     private CarDto car;
 
 
-
-
-    public CarAdapter( CarDto car ) {
+    CarAdapter(CarDto car) {
         this.car = car;
     }
 

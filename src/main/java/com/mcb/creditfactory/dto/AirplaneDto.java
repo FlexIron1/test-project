@@ -2,6 +2,7 @@ package com.mcb.creditfactory.dto;
 
 
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.mcb.creditfactory.external.CollateralType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,4 +24,8 @@ public class AirplaneDto implements Collateral {
     private Integer place;
     private Set<BigDecimal> value;
 
+    @Override
+    public CollateralType getType() {
+        return CollateralType.AIRPLANE;
+    }
 }
